@@ -25,15 +25,18 @@ export class HomeComponent implements OnInit {
       next: (data: Evento[]) => {
         this.eventos = data;
         console.log('Eventos cargados:', this.eventos);
-        for (let index = 0; index < .length; index++) {
-          const element = array[index];
-          }
-        }
-      }, 
+        this.db.fetchLocalCollection('datos')
+        .subscribe((res: any)=>{
+          res.forEach((items: any)=>
+          this.db.addFirestoreDocument('eventos', items))
+        })
+      },
+      
       error: (e: any) => {
         console.error('Error al cargar eventos:', e);
       }
     });
+    
   }
 
   trackById(index: number, item: Evento): any {
