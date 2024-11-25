@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { EventoService } from '../../services/evento.service';
 import { Evento } from '../../core/modelo/evento';
 import { CommonModule } from '@angular/common';
 import { DatabaseService } from '../../services/database.service';
@@ -27,16 +26,15 @@ export class HomeComponent implements OnInit {
         console.log('Eventos cargados:', this.eventos);
         this.db.fetchLocalCollection('datos')
         .subscribe((res: any)=>{
-          res.forEach((items: any)=>
-          this.db.addFirestoreDocument('eventos', items))
+          res.forEach((items: any) => {
+            this.db.addFirestoreDocument('eventos',items)
+          });
         })
-      },
-      
+      }, 
       error: (e: any) => {
         console.error('Error al cargar eventos:', e);
       }
     });
-    
   }
 
   trackById(index: number, item: Evento): any {
