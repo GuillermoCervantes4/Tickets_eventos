@@ -1,0 +1,20 @@
+<div class="container mt-2">
+    <h1 class="text-center">Catálogo</h1>
+    <hr />
+    <div class="row">
+      <div *ngFor="let item of eventos; trackBy: trackById" class="col-sm-3 mt-1">
+        <div class="card">
+            <img src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          <div class="card-body">
+            <p class="fw-bold">{{ item.nombre }}</p>
+            <p class="fw-bold">{{ item.fecha }}</p>
+            <p class="fw-bold">{{ item.lugar }}</p>
+            <div>
+              <a routerLink="/ficha" class="navbar-btn">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
