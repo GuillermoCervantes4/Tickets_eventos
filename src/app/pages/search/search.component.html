@@ -1,11 +1,39 @@
-<p>search works!</p>
-<form class="d-flex" role="search">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
+<form class="d-flex" role="search" (submit)="false">
+  <input
+    class="form-control me-2"
+    type="search"
+    placeholder="Buscar eventos"
+    aria-label="Search"
+    [formControl]="searchControl"
+  />
+  <button class="btn btn-outline-success" type="button" (click)="false">Buscar</button>
 </form>
 
 <div class="container mt-2">
-    <h1 class="text-center">Catálogo</h1>
-    <hr />
+  <h1 class="text-center">Catálogo</h1>
+  <hr />
+  <div *ngIf="filteredEventos.length > 0; else noEventos" class="row">
+    <div *ngFor="let evento of filteredEventos; trackBy: trackById" class="col-sm-3 mt-1">
+      <div class="card">
+        <img
+          src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Imagen del evento"
+          class="card-img-top"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ evento.nombre }}</h5>
+          <p class="card-text">
+            <strong>Fecha:</strong> {{ evento.fecha }}
+          </p>
+          <p class="card-text">
+            <strong>Lugar:</strong> {{ evento.lugar }}
+          </p>
+          <a [routerLink]="['/ficha', evento.id]" class="btn btn-primary">Ver más</a>
+        </div>
+      </div>
+    </div>
   </div>
-  
+  <ng-template #noEventos>
+    <p class="text-center">No se encontraron eventos.</p>
+  </ng-template>
+</div>
