@@ -1,13 +1,13 @@
 <div class="card mb-3" style="max-width: 540px;">
     <h1>Ficha</h1>
-    <div *ngFor="let item of eventos; trackBy: trackById" >
+    <div *ngIf="action==='read'" >
       <div class="col-md-4">
         <img src="..." class="img-fluid rounded-start" alt="...">
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">{{ item.descripcion }}</p>
+          <h5 class="card-title">{{data.descripcion}}</h5>
+          <p class="card-text"></p>
           <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>

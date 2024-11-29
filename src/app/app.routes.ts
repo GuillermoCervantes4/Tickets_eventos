@@ -15,6 +15,6 @@ export const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'search', component: SearchComponent },
   { path: 'carrito', component: CarritoComponent },
-  { path: 'ficha', component: FichaComponent},
+  { path: 'ficha/:action/:id', component: FichaComponent},
   { path: '**', pathMatch:'full',redirectTo: 'home'}
 ];

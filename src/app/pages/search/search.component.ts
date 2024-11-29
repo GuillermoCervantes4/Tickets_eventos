@@ -46,8 +46,11 @@ export class SearchComponent implements OnInit {
       return this.eventos; 
     }
     return this.eventos.filter(evento =>
-      evento.nombre?.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+      evento.nombre?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      evento.categorias[0]?.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    
+
   }
 
   trackById(index: number, item: Evento): any {

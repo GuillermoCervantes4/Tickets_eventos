@@ -5,5 +5,6 @@ export class Evento {
     fecha!: string;
     descripcion!: string;
     categorias!: string;
+    genero!: string;
 }
 

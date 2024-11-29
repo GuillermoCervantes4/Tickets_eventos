@@ -5,7 +5,7 @@
       "lugar": "Estadio Nacional, Ciudad",
       "fecha": "2025-01-01",
       "descripcion": "Un evento masivo con las bandas de rock más famosas del momento.",
-      "tipo": "Musical",
+      "genero": "Musical",
       "categorias": ["Rock", "Conciertos", "Festival"],
       "cantidad_de_tickets": 10000,
       "tickets": [
@@ -25,7 +25,7 @@
       "lugar": "Parque Central, Ciudad",
       "fecha": "2025-02-15",
       "descripcion": "Un evento de degustación de las mejores comidas internacionales.",
-      "tipo": "Gastronómico",
+      "genero": "Gastronómico",
       "categorias": ["Comida", "Cultura", "Festival"],
       "cantidad_de_tickets": 5000,
       "tickets": [
@@ -45,7 +45,7 @@
       "lugar": "Cine Universal, Ciudad",
       "fecha": "2025-03-01",
       "descripcion": "Una noche completa de películas de terror clásicas y modernas.",
-      "tipo": "Cultural",
+      "genero": "Cultural",
       "categorias": ["Cine", "Terror", "Festival"],
       "cantidad_de_tickets": 2000,
       "tickets": [
@@ -65,7 +65,7 @@
       "lugar": "Museo de Arte Moderno, Ciudad",
       "fecha": "2025-03-20",
       "descripcion": "Exposición con artistas contemporáneos de renombre mundial.",
-      "tipo": "Cultural",
+      "genero": "Cultural",
       "categorias": ["Arte", "Cultura", "Exposición"],
       "cantidad_de_tickets": 3000,
       "tickets": [
@@ -85,7 +85,7 @@
       "lugar": "Centro de Convenciones, Ciudad",
       "fecha": "2025-04-05",
       "descripcion": "Evento que reúne a los expertos más destacados en el campo de la inteligencia artificial.",
-      "tipo": "Tecnología",
+      "genero": "Tecnología",
       "categorias": ["Inteligencia Artificial", "Tecnología", "Conferencias"],
       "cantidad_de_tickets": 1500,
       "tickets": [
@@ -105,7 +105,7 @@
       "lugar": "Parque de la Música, Ciudad",
       "fecha": "2025-04-20",
       "descripcion": "Un festival con los mejores DJs del mundo y una experiencia única.",
-      "tipo": "Musical",
+      "genero": "Musical",
       "categorias": ["Electrónica", "Música", "Festival"],
       "cantidad_de_tickets": 5000,
       "tickets": [
@@ -125,7 +125,7 @@
       "lugar": "Museo de Ciencias Naturales, Ciudad",
       "fecha": "2025-05-10",
       "descripcion": "Una exposición educativa sobre dinosaurios y fósiles prehistóricos.",
-      "tipo": "Cultural",
+      "genero": "Cultural",
       "categorias": ["Ciencia", "Educación", "Exposición"],
       "cantidad_de_tickets": 4000,
       "tickets": [
@@ -145,7 +145,7 @@
       "lugar": "Teatro Real, Ciudad",
       "fecha": "2025-06-01",
       "descripcion": "Un evento que presenta las mejores obras clásicas de teatro mundial.",
-      "tipo": "Cultural",
+      "genero": "Cultural",
       "categorias": ["Teatro", "Arte", "Festival"],
       "cantidad_de_tickets": 2500,
       "tickets": [
@@ -165,7 +165,7 @@
       "lugar": "Cine Global, Ciudad",
       "fecha": "2025-06-15",
       "descripcion": "Un evento cinematográfico que reúne a cineastas de todo el mundo.",
-      "tipo": "Cultural",
+      "genero": "Cultural",
       "categorias": ["Cine", "Festival", "Arte"],
       "cantidad_de_tickets": 3000,
       "tickets": [
@@ -185,7 +185,7 @@
       "lugar": "Auditorio Nacional, Ciudad",
       "fecha": "2025-07-01",
       "descripcion": "Un concierto de música clásica con orquestas de renombre mundial.",
-      "tipo": "Musical",
+      "genero": "Musical",
       "categorias": ["Clásica", "Música", "Concierto"],
       "cantidad_de_tickets": 2000,
       "tickets": [
@@ -205,7 +205,7 @@
       "lugar": "Teatro Nacional, Ciudad",
       "fecha": "2025-08-05",
       "descripcion": "Un evento que reúne a los mejores músicos de jazz de todo el mundo.",
-      "tipo": "Musical",
+      "genero": "Musical",
       "categorias": ["Jazz", "Conciertos", "Festival"],
       "cantidad_de_tickets": 3500,
       "tickets": [
@@ -225,7 +225,7 @@
       "lugar": "Auditorio Médico, Ciudad",
       "fecha": "2025-09-10",
       "descripcion": "Evento internacional de médicos y profesionales de la salud que comparten conocimientos y avances.",
-      "tipo": "Conferencias",
+      "genero": "Conferencias",
       "categorias": ["Salud", "Medicina", "Educación"],
       "cantidad_de_tickets": 2500,
       "tickets": [
@@ -245,7 +245,7 @@
       "lugar": "Centro de Ciencia, Ciudad",
       "fecha": "2025-09-20",
       "descripcion": "Exposición sobre los últimos avances en ciencia y tecnología, con exposiciones interactivas.",
-      "tipo": "Educación",
+      "genero": "Educación",
       "categorias": ["Ciencia", "Tecnología", "Exposición"],
       "cantidad_de_tickets": 3000,
       "tickets": [
@@ -265,7 +265,7 @@
       "lugar": "Cine Arte, Ciudad",
       "fecha": "2025-10-01",
       "descripcion": "Maratón de proyecciones de los más grandes clásicos del cine mundial.",
-      "tipo": "Cultural",
+      "genero": "Cultural",
       "categorias": ["Cine", "Arte", "Cultura"],
       "cantidad_de_tickets": 1500,
       "tickets": [
@@ -285,7 +285,7 @@
       "lugar": "Plaza Mayor, Ciudad",
       "fecha": "2025-11-10",
       "descripcion": "Un festival que presenta a los mejores artistas de música folklórica.",
-      "tipo": "Musical",
+      "genero": "Musical",
       "categorias": ["Folklore", "Música", "Festival"],
       "cantidad_de_tickets": 4500,
       "tickets": [
@@ -305,7 +305,7 @@
       "lugar": "Teatro Internacional, Ciudad",
       "fecha": "2025-12-01",
       "descripcion": "Un evento donde los mejores comediantes internacionales presentan sus espectáculos.",
-      "tipo": "Cultural",
+      "genero": "Cultural",
       "categorias": ["Comedia", "Teatro", "Festival"],
       "cantidad_de_tickets": 3500,
       "tickets": [
@@ -325,7 +325,7 @@
       "lugar": "Estadio Olímpico, Ciudad",
       "fecha": "2026-01-05",
       "descripcion": "Competencia entre los mejores equipos de fútbol del mundo.",
-      "tipo": "Deportes",
+      "genero": "Deportes",
       "categorias": ["Fútbol", "Deportes", "Competencia"],
       "cantidad_de_tickets": 6000,
       "tickets": [
@@ -345,7 +345,7 @@
       "lugar": "Auditorio Global, Ciudad",
       "fecha": "2026-02-10",
       "descripcion": "Conferencia que reúne a científicos y expertos en cambio climático.",
-      "tipo": "Conferencias",
+      "genero": "Conferencias",
       "categorias": ["Cambio Climático", "Ciencia", "Educación"],
       "cantidad_de_tickets": 2000,
       "tickets": [
@@ -365,7 +365,7 @@
       "lugar": "Teatro Nacional, Ciudad",
       "fecha": "2026-03-01",
       "descripcion": "Un evento cultural con presentaciones de danza de todo el mundo.",
-      "tipo": "Cultural",
+      "genero": "Cultural",
       "categorias": ["Danza", "Arte", "Festival"],
       "cantidad_de_tickets": 2500,
       "tickets": [
@@ -385,7 +385,7 @@
       "lugar": "Museo del Arte Urbano, Ciudad",
       "fecha": "2026-03-20",
       "descripcion": "Una muestra de los mejores trabajos de arte urbano de artistas internacionales.",
-      "tipo": "Cultural",
+      "genero": "Cultural",
       "categorias": ["Arte", "Cultura", "Exposición"],
       "cantidad_de_tickets": 3000,
       "tickets": [
@@ -405,7 +405,7 @@
       "lugar": "Parque Central, Ciudad",
       "fecha": "2026-04-10",
       "descripcion": "Festival que reúne a los mejores productores de cerveza artesanal del país.",
-      "tipo": "Gastronómico",
+      "genero": "Gastronómico",
       "categorias": ["Cerveza", "Gastronomía", "Festival"],
       "cantidad_de_tickets": 4000,
       "tickets": [
@@ -425,7 +425,7 @@
       "lugar": "Estadio de Tenis, Ciudad",
       "fecha": "2026-05-01",
       "descripcion": "Competencia internacional con los mejores tenistas del mundo.",
-      "tipo": "Deportes",
+      "genero": "Deportes",
       "categorias": ["Tenis", "Deportes", "Competencia"],
       "cantidad_de_tickets": 5000,
       "tickets": [
@@ -445,7 +445,7 @@
       "lugar": "Museo de Moda, Ciudad",
       "fecha": "2026-06-15",
       "descripcion": "Muestra de las últimas tendencias y diseños de moda contemporánea.",
-      "tipo": "Arte",
+      "genero": "Arte",
       "categorias": ["Moda", "Arte", "Exposición"],
       "cantidad_de_tickets": 3000,
       "tickets": [
@@ -465,7 +465,7 @@
       "lugar": "Parque de Música, Ciudad",
       "fecha": "2026-07-10",
       "descripcion": "Festival que reúne a los DJs más famosos del mundo en un evento de música electrónica.",
-      "tipo": "Musical",
+      "genero": "Musical",
       "categorias": ["Electrónica", "Festival", "Música"],
       "cantidad_de_tickets": 6000,
       "tickets": [

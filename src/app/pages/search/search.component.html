@@ -28,6 +28,10 @@
           <p class="card-text">
             <strong>Lugar:</strong> {{ evento.lugar }}
           </p>
+          <p class="card-text">
+            <strong>Categoria:</strong> {{ evento.categorias[0] }}
+          </p>
+
           <a [routerLink]="['/ficha', evento.id]" class="btn btn-primary">Ver más</a>
         </div>
       </div>
