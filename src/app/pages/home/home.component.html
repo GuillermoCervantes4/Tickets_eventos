@@ -1,4 +1,8 @@
+<div class="add-button">
+  <a href="/add-event">Añadir evento</a>
+</div>
 <div class="container mt-2">
+  
     <h1 class="text-center">Catálogo</h1>
     <hr />
     <div class="row">
@@ -10,6 +14,7 @@
             <p class="fw-bold">{{ item.fecha }}</p>
             <p class="fw-bold">{{ item.lugar }}</p>
             <p class="fw-medium">{{item.categorias}}</p>
+
             <div>
               <a href="/ficha/view/{{item.id}}" class="navbar-btn" class="btn btn-primary ">Ver más {{item.id}}</a>
             </div>
@@ -19,3 +24,4 @@
     </div>
   </div>
   
+ 

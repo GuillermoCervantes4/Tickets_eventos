@@ -7,7 +7,7 @@ import { SearchComponent } from './pages/search/search.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { FichaComponent } from './pages/ficha/ficha.component';
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
-
+import { AddComponent } from './pages/add/add.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -16,7 +16,8 @@ export const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'search', component: SearchComponent },
   { path: 'carrito', component: CarritoComponent },
-  { path: 'ficha/:action/:id', component: FichaComponent},
-  { path: 'edit-profile', component: EditProfileComponent},
+  { path: 'ficha/:action/:id', component: FichaComponent },
+  { path: 'edit-profile', component: EditProfileComponent },
+  { path: 'add-event',component: AddComponent },
   { path: '**', pathMatch:'full',redirectTo: 'home'}
 ];

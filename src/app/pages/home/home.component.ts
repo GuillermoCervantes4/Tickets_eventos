@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Evento } from '../../core/modelo/evento';
 import { CommonModule } from '@angular/common';
 import { DatabaseService } from '../../services/database.service';
-
+import { AddComponent } from '../add/add.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,AddComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

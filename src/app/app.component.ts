@@ -15,7 +15,8 @@ import { Component, OnInit, inject } from '@angular/core';  // Asegúrate de inc
     RouterModule,   
     CardComponent,  
     BtnComponent,   
-    MessageComponent 
+    MessageComponent,
+   
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
