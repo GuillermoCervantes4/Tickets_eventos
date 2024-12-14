@@ -478,6 +478,105 @@
           "precio": 110
         }
       ]
+    },
+    {
+      "id": 25,
+      "nombre": "Concierto de Rock",
+      "descripcion": "Un evento masivo con las bandas de rock más famosas del momento.",
+      "precio": 33,
+      "descuento": 0,
+      "destacado": true,
+      "imageUrl": "https://example.com/concierto-de-rock.jpg"
+    },
+    {
+      "id": 26,
+      "nombre": "Festival Gastronómico Internacional",
+      "descripcion": "Un evento de degustación de las mejores comidas internacionales.",
+      "precio": 22,
+      "descuento": 0,
+      "destacado": true,
+      "imageUrl": "https://example.com/festival-gastronomico.jpg"
+    },
+    {
+      "id": 27,
+      "nombre": "Maratón de Cine de Terror",
+      "descripcion": "Una noche completa de películas de terror clásicas y modernas.",
+      "precio": 16.5,
+      "descuento": 0,
+      "destacado": false,
+      "imageUrl": "https://example.com/maraton-cine-terror.jpg"
+    },
+    {
+      "id": 28,
+      "nombre": "Feria de Arte Contemporáneo",
+      "descripcion": "Exposición con artistas contemporáneos de renombre mundial.",
+      "precio": 22,
+      "descuento": 0,
+      "destacado": false,
+      "imageUrl": "https://example.com/feria-arte-contemporaneo.jpg"
+    },
+    {
+      "id": 29,
+      "nombre": "Conferencia de Inteligencia Artificial",
+      "descripcion": "Evento que reúne a los expertos más destacados en el campo de la inteligencia artificial.",
+      "precio": 44,
+      "descuento": 0,
+      "destacado": true,
+      "imageUrl": "https://example.com/conferencia-ia.jpg"
+    },
+    {
+      "id": 30,
+      "nombre": "Festival de Música Electrónica",
+      "descripcion": "Un festival con los mejores DJs del mundo y una experiencia única.",
+      "precio": 33,
+      "descuento": 0,
+      "destacado": true,
+      "imageUrl": "https://example.com/festival-electronica.jpg"
+    },
+    {
+      "id": 31,
+      "nombre": "Exposición de Dinosaurios",
+      "descripcion": "Una exposición educativa sobre dinosaurios y fósiles prehistóricos.",
+      "precio": 11,
+      "descuento": 0,
+      "destacado": false,
+      "imageUrl": "https://example.com/exposicion-dinosaurios.jpg"
+    },
+    {
+      "id": 32,
+      "nombre": "Festival de Teatro Clásico",
+      "descripcion": "Un evento que presenta las mejores obras clásicas de teatro mundial.",
+      "precio": 22,
+      "descuento": 0,
+      "destacado": false,
+      "imageUrl": "https://example.com/festival-teatro-clasico.jpg"
+    },
+    {
+      "id": 33,
+      "nombre": "Festival Internacional de Cine",
+      "descripcion": "Un evento cinematográfico que reúne a cineastas de todo el mundo.",
+      "precio": 33,
+      "descuento": 0,
+      "destacado": true,
+      "imageUrl": "https://example.com/festival-cine.jpg"
+    },
+    {
+      "id": 34,
+      "nombre": "Concierto de Música Clásica",
+      "descripcion": "Un concierto de música clásica con orquestas de renombre mundial.",
+      "precio": 44,
+      "descuento": 0,
+      "destacado": false,
+      "imageUrl": "https://example.com/concierto-musica-clasica.jpg"
+    },
+    {
+      "id": 35,
+      "nombre": "Festival de Jazz Internacional",
+      "descripcion": "Un evento que reúne a los mejores músicos de jazz de todo el mundo.",
+      "precio": 55,
+      "descuento": 0,
+      "destacado": false,
+      "imageUrl": "https://example.com/festival-jazz.jpg"
     }
   ]
   

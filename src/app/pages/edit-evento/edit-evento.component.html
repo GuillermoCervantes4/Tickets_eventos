@@ -1,0 +1,31 @@
+<form [formGroup]="eventoForm" (ngSubmit)="onEdit()">
+    <label for="nombre">Nombre del evento:</label>
+    <input id="nombre" formControlName="nombre" type="text" />
+    <div *ngIf="eventoForm.get('nombre')?.invalid && eventoForm.get('nombre')?.touched">
+      <small>El nombre debe tener al menos 4 caracteres.</small>
+    </div>
+  
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" formControlName="descripcion"></textarea>
+    <div *ngIf="eventoForm.get('descripcion')?.invalid && eventoForm.get('descripcion')?.touched">
+      <small>La descripción es requerida.</small>
+    </div>
+  
+    <label for="precio">Precio:</label>
+    <input id="precio" formControlName="precio" type="number" />
+    <div *ngIf="eventoForm.get('precio')?.invalid && eventoForm.get('precio')?.touched">
+      <small>El precio debe ser mayor o igual a 0.</small>
+    </div>
+  
+    <label for="descuento">Descuento (%):</label>
+    <input id="descuento" formControlName="descuento" type="number" />
+    <div *ngIf="eventoForm.get('descuento')?.invalid && eventoForm.get('descuento')?.touched">
+      <small>El descuento debe estar entre 0 y 100.</small>
+    </div>
+  
+    <label for="destacado">Destacado:</label>
+    <input id="destacado" formControlName="destacado" type="checkbox" />
+  
+    <button type="submit" [disabled]="eventoForm.invalid">Guardar</button>
+  </form>
+  
