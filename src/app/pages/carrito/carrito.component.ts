@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CarritoService } from '../../services/carrito.service';
 import { Carrito } from '../../core/modelo/carrito';
 import { CommonModule } from '@angular/common';
+import { FichaComponent } from '../ficha/ficha.component';
+import { DatabaseService } from '../../services/database.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-carrito',
@@ -11,16 +14,25 @@ import { CommonModule } from '@angular/common';
   styleUrl: './carrito.component.scss'
 })
 export class CarritoComponent implements OnInit{
+  carrito: { evento: string; fecha: string; tipo: string; cantidad: number; precio: number }[] = [];
+
   constructor(private carritoService: CarritoService) {}
-  listacarrito: Carrito[] = [];
+
   ngOnInit(): void {
-    this.getListCarrito();
+    const storedCarrito = localStorage.getItem('carrito');
+    if (storedCarrito) {
+      this.carrito = JSON.parse(storedCarrito);
+    }
   }
 
-  getListCarrito(){
-    this.listacarrito = this.carritoService.getCarrito();
+  calcularTotal(): number {
+    return this.carrito.reduce((total, item) => total + item.precio, 0);
   }
-  trackById(index: number, item: any): any {
-    return item.evento.id;  
+
+  confirmarCompra(): void {
+    console.log('Compra confirmada:', this.carrito);
+    alert('Gracias por tu compra.');
+    this.carrito = [];
+    localStorage.removeItem('carrito');
   }
 }

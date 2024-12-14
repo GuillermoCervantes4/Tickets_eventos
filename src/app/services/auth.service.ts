@@ -10,23 +10,26 @@ import { DatabaseService } from './database.service';
 export class AuthService {
 
   isLogued = false;
+  
   profile: any;
+  evento: any;
 
   constructor(
     private auth: Auth,
     private firestore: Firestore,
     public db: DatabaseService,
     public router: Router
-  ) {
+  ) 
+  {
     this.verifyIsLogued();
     //////////////
     let storedProfile: any = localStorage.getItem('profile');
     if (storedProfile) {
       this.profile = JSON.parse(storedProfile);
     }
-    let stroedUser: any = localStorage.getItem('user');
-    if (stroedUser) {
-      let user = JSON.parse(stroedUser)
+    let storedUser: any = localStorage.getItem('user');
+    if (storedUser) {
+      let user = JSON.parse(storedUser)
       this.getProfile(user?.uid);
     }
     //////////////

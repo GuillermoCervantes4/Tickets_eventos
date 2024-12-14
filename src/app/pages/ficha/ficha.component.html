@@ -29,8 +29,9 @@
     <p class="card-text"><strong>Categorías: </strong>{{ data.categorias }}</p>
     <p class="card-text"><strong>Fecha: </strong>{{ data.fecha }}</p>
     <p class="card-text"><strong>cantidad_de_tickets: </strong>{{ data.cantidad_de_tickets }}</p>
-    <button>Precio {{ data.tickets[0].tipo}}: {{ data.tickets[0].precio}} Bs</button>
-    <button>Precio {{ data.tickets[1].tipo}}: {{ data.tickets[1].precio}} Bs</button>
+    <button (click)="agregarAlCarrito(data.tickets[0].tipo, data.tickets[0].precio)" >Precio {{ data.tickets[0].tipo}}: {{ data.tickets[0].precio}} Bs</button>
+    <button (click)="agregarAlCarrito('Descuento', data.tickets[0].precio * 0.1)">Precio Descuento: {{ data.tickets[0].precio*0.1 | number:'1.0-2'}} Bs</button>
+    <button (click)="agregarAlCarrito(data.tickets[1].tipo, data.tickets[1].precio)">Precio {{ data.tickets[1].tipo}}: {{ data.tickets[1].precio}} Bs</button>
     <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
   </div>
 </div>

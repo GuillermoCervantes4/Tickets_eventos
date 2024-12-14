@@ -7,16 +7,21 @@
     <hr />
     <div class="row">
       <div *ngFor="let item of eventos; trackBy: trackById" class="col-sm-3 mt-1">
+        
         <div class="card">
+          
             <img src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
           <div class="card-body">
+            
             <p class="fw-bold">{{ item.nombre }}</p>
             <p class="fw-bold">{{ item.fecha }}</p>
             <p class="fw-bold">{{ item.lugar }}</p>
             <p class="fw-medium">{{item.categorias}}</p>
-
+            
             <div>
+              
               <a href="/ficha/view/{{item.id}}" class="navbar-btn" class="btn btn-primary ">Ver más {{item.id}}</a>
+              <a href="/edit-evento" class="navbar-btn" class="btn btn-secondary">Editar</a>
             </div>
           </div>
         </div>

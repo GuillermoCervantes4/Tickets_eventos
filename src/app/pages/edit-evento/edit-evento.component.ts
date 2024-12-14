@@ -1,24 +1,17 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { DatabaseService } from '../../services/database.service';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-
 
 @Component({
-  selector: 'app-edit-profile',
+  selector: 'app-edit-evento',
   standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    CommonModule
-  ],
-  templateUrl: './edit-profile.component.html',
-  styleUrl: './edit-profile.component.scss'
+  imports: [],
+  templateUrl: './edit-evento.component.html',
+  styleUrl: './edit-evento.component.scss'
 })
-export class EditProfileComponent {
-
-
-  profileForm: FormGroup;
+export class EditEventoComponent {
+profileForm: FormGroup;
   constructor(
     public auth: AuthService,
     public db: DatabaseService,
@@ -26,9 +19,9 @@ export class EditProfileComponent {
   ) {
     if (auth.profile) {
       this.profileForm = fb.group({
-        name: [auth.profile?.email, [Validators.required, Validators.email]],
-        description: [auth.profile?.name, Validators.minLength(4)],
-        precio: [auth.profile?.phone],
+        email: [auth.profile?.email, [Validators.required, Validators.email]],
+        name: [auth.profile?.name, Validators.minLength(4)],
+        phone: [auth.profile?.phone],
         // portraitPhoto: [auth.profile?.protraitPhoto ],
       })
     }
@@ -48,5 +41,4 @@ export class EditProfileComponent {
       alert('Datos incorrectos');
     }
   }
-
 }

@@ -40,4 +40,5 @@ export class HomeComponent implements OnInit {
   trackById(index: number, item: Evento): any {
     return item.id;
   }
+  
 }

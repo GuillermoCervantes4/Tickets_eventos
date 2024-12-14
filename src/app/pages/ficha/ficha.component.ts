@@ -18,6 +18,7 @@ export class FichaComponent implements OnInit {
   id: number | null = null; 
   data!: Evento; 
   evento: any;
+  carrito: { evento: string, fecha: string, tipo: string, precio: number }[] = [];
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -47,5 +48,22 @@ export class FichaComponent implements OnInit {
       },
       error: (err) => console.error('Error al cargar eventos:', err),
     });
+  }
+  agregarAlCarrito(tipo: string, precio: number): void {
+    if (!this.data) {
+      console.error('No hay datos del evento disponibles para agregar al carrito');
+      return;
+    }
+
+    const item = {
+      evento: this.data.nombre,
+      fecha: this.data.fecha,
+      tipo,
+      precio
+    };
+
+    this.carrito.push(item);
+    localStorage.setItem('carrito', JSON.stringify(this.carrito));
+    console.log('Carrito actualizado:', this.carrito);
   }
 }

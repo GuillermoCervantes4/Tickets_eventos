@@ -2,36 +2,40 @@
     <h1>Carrito de compras</h1>
     <hr />
     <div class="row">
-        <div class="col-sm-9">
-            <div class="card">
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-striped text-center">
-                            <thead>
-                                <th>Evento</th>
-                                <th>fecha</th>
-                                <th>precio</th>
-                                <th>Cantidad</th>
-                                <th>Importe</th>
-                            </thead>
-                            <!-- <tbody>
-                                <div>
-                                    <tr>
-                                        <td>{{item.evento.nombre}}</td>
-                                        <img [src]="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                                        <td>{{item.evento.precio}}</td>
-                                        <td>{{item.evento.cantidad}}</td>
-                                        <td>{{item.evento.precio * item.cantidad}}</td>
-                                    </tr>
-                                  </div>
-                            </tbody> -->
-                        </table>
-                        <tbody>
-                            <button button type="button" class="btn btn-primary">Confirmar</button>
-                        </tbody>
-                    </div>
-                </div>
+      <div class="col-sm-9">
+        <div class="card">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped text-center">
+                <thead>
+                  <tr>
+                    <th>Evento</th>
+                    <th>Fecha</th>
+                    <th>Tipo</th>
+                    <th>Precio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of carrito">
+                    <td>{{ item.evento }}</td>
+                    <td>{{ item.fecha }}</td>
+                    <td>{{ item.tipo }}</td>
+                    <td>{{ item.precio | currency }}</td>
+                  </tr>
+                  <tr>
+                    <td colspan="4"><strong>Total</strong></td>
+                    <td><strong>{{ calcularTotal() | currency }}</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="text-center mt-3">
+                <button (click)="confirmarCompra()" type="button" class="btn btn-primary">
+                  Confirmar
+                </button>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
