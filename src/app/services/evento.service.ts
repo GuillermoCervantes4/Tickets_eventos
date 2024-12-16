@@ -13,6 +13,7 @@ export class EventoService {
   getEvento(): Observable<Evento[]> {
     return this.http.get<Evento[]>(this.url);
   }
+  
 }
 
 // export class EventoService {

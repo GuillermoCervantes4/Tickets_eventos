@@ -1,32 +1,72 @@
 <div class="add-button">
   <a href="/add-event">Añadir evento</a>
 </div>
-<div class="container mt-2">
-  
-    <h1 class="text-center">Catálogo</h1>
-    <hr />
-    <div class="row">
-      <div *ngFor="let item of eventos; trackBy: trackById" class="col-sm-3 mt-1">
-        
-        <div class="card">
-          
-            <img src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-          <div class="card-body">
-            
-            <p class="fw-bold">{{ item.nombre }}</p>
-            <p class="fw-bold">{{ item.fecha }}</p>
-            <p class="fw-bold">{{ item.lugar }}</p>
-            <p class="fw-medium">{{item.categorias}}</p>
-            
-            <div>
-              
-              <a href="/ficha/view/{{item.id}}" class="navbar-btn" class="btn btn-primary ">Ver más {{item.id}}</a>
-              <a href="/edit-evento" class="navbar-btn" class="btn btn-secondary">Editar</a>
-            </div>
+
+<!-- Sección de Eventos Destacados -->
+<div *ngIf="eventosDestacados.length > 0">
+  <h2 class="text-center">Eventos Destacados</h2>
+  <hr/>
+  <div class="row">
+    <div *ngFor="let item of eventosDestacados; trackBy: trackById" class="col-sm-3 mt-1">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        <div class="card-body">
+          <p class="fw-bold">{{ item.nombre }}</p>
+          <p class="fw-bold">{{ item.fecha }}</p>
+          <p class="fw-bold">{{ item.lugar }}</p>
+          <p class="fw-medium">{{ item.categorias }}</p>
+          <div>
+            <a href="/ficha/view/{{ item.id }}" class="navbar-btn btn btn-primary">Ver más {{ item.id }}</a>
+            <a href="/edit-evento" class="navbar-btn btn btn-secondary">Editar</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
- 
+</div>
+
+<!-- Sección de Eventos No Destacados -->
+<div *ngIf="eventosNoDestacados.length > 0" class="container mt-2">
+  <h1 class="text-center">Eventos no destacados</h1>
+  <hr />
+  <div class="row">
+    <div *ngFor="let item of eventosNoDestacados; trackBy: trackById" class="col-sm-3 mt-1">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        <div class="card-body">
+          <p class="fw-bold">{{ item.nombre }}</p>
+          <p class="fw-bold">{{ item.fecha }}</p>
+          <p class="fw-bold">{{ item.lugar }}</p>
+          <p class="fw-medium">{{ item.categorias }}</p>
+          <div>
+            <a href="/ficha/view/{{ item.id }}" class="navbar-btn btn btn-primary">Ver más {{ item.id }}</a>
+            <a href="/edit-evento" class="navbar-btn btn btn-secondary">Editar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="eventosSinDestacado.length > 0">
+  <h2 class="text-center">Catálogo</h2>
+  <hr/>
+  <div class="row">
+    <div *ngFor="let item of eventosSinDestacado; trackBy: trackById" class="col-sm-3 mt-1">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        <div class="card-body">
+          <p class="fw-bold">{{ item.nombre }}</p>
+          <p class="fw-bold">{{ item.fecha }}</p>
+          <p class="fw-bold">{{ item.lugar }}</p>
+          <p class="fw-medium">{{ item.categorias }}</p>
+          <p class="fw-medium"><strong>Precio</strong> {{ item.tickets[0].precio }} Bs</p>
+          <div>
+            <a href="/ficha/view/{{ item.id }}" class="navbar-btn btn btn-primary">Ver más {{ item.id }}</a>
+            <a href="/edit-evento" class="navbar-btn btn btn-secondary">Editar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

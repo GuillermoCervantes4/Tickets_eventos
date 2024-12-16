@@ -1,0 +1,12 @@
+[
+    {
+        "codigo": 94756,
+        "monto": 150,
+        "caducidad": "15-2-1025"
+      },
+      {
+        "codigo": 54321,
+        "monto": 50,
+        "caducidad": "8-2-2025"
+      }
+]

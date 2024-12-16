@@ -1,0 +1,49 @@
+<h1>Gift-Card</h1>
+<div class="card">
+    <div class="card-body">
+        <div class="card-tittle">
+            <strong>
+                Crear
+            </strong>
+        </div>
+        <form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+            <div class="form-control-group">
+                <label for="">Código</label>
+                <input
+                formControlName="codigo" class="form-control" type="text">
+              </div>
+              <div class="form-control-group">
+                <label for="">Monto</label>
+                <input
+                formControlName="monto" class="form-control" type="number">
+              </div>
+              <div class="form-control-group">
+                <label for="">Fecha: Límite</label>
+                <input
+                formControlName="caducidad" class="form-control" type="text">
+              </div>
+              <button type="submit" class="btn btn-secondary">Generar nueva Gift-Card</button>
+        </form>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div class="card-tittle">
+            <strong>Cards existentes</strong>
+        </div>
+        <div class="row">
+            <div *ngFor="let item of cards; trackBy: trackByCode" class="col-sm-3 mt-1">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">{{item.codigo}}</p>
+                        <p class="card-text">{{item.monto}}</p>
+                        <p class="card-text">{{item.caducidad}}</p>
+                    </div>
+                </div>
+                <button class="btn btn-dark">Editar</button>
+                <button class="btn btn-danger">Borrar</button>
+            </div>
+        </div>
+    </div>
+</div>

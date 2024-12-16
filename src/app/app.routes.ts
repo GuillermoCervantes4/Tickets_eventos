@@ -9,6 +9,7 @@ import { FichaComponent } from './pages/ficha/ficha.component';
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 import { AddComponent } from './pages/add/add.component';
 import { EditEventoComponent } from './pages/edit-evento/edit-evento.component';
+import { GiftcardComponent } from './pages/giftcard/giftcard.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -21,5 +22,6 @@ export const routes: Routes = [
   { path: 'edit-profile', component: EditProfileComponent },
   { path: 'add-event',component: AddComponent },
   { path: 'edit-evento', component: EditEventoComponent },
+  { path: 'gift-card', component: GiftcardComponent },
   { path: '**', pathMatch:'full',redirectTo: 'home'}
 ];

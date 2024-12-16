@@ -12,4 +12,5 @@ export class Evento {
     genero!: string;
     tickets!: Ticket[];
     cantidad_de_tickets!: number;
+    destacado!: boolean;
 }

@@ -1,15 +1,42 @@
 <h1>Añadir evento</h1>
 
-<div class="input-group mb-3">
+<form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+  <div class="input-group mb-3">
     <div class="input-group-text">
-        <h6>Titulo de evento</h6>
+      <h6>Titulo de evento</h6>
     </div>
-    <input type="text" class="form-control" aria-label="Text input with checkbox">
+    <input type="text" formControlName="nombre" class="form-control" aria-label="Titulo del evento">
   </div>
-  
+  <hr/>
+  <div class="input-group">
+    <div class="input-group-text">
+      <h6>Id</h6>
+    </div>
+    <input type="number" formControlName="id" class="form-control" aria-label="Id del evento">
+  </div>
+  <hr/>
   <div class="input-group">
     <div class="input-group-text">
       <h6>Descripcion de evento</h6>
     </div>
-    <input type="text" class="form-control" aria-label="Text input with radio button">
+    <input type="text" formControlName="descripcion" class="form-control" aria-label="Descripcion del evento">
   </div>
+  <hr/>
+  <div class="input-group">
+    <div class="input-group-text">
+      <h6>Precio</h6>
+    </div>
+    <input type="number" formControlName="precio" class="form-control" aria-label="Precio del evento">
+  </div>
+  <hr/>
+  <div class="input-group">
+    <div class="input-group-text">
+      <h6>Descuento</h6>
+    </div>
+    <input type="number" formControlName="descuento" class="form-control" aria-label="Descuento del ticket">
+  </div>
+  <hr/>
+  <button type="submit" class="btn btn-primary">
+    Subir
+  </button>
+</form>
